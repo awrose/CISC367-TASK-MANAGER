@@ -17,6 +17,9 @@
 		7BE012502829BEFE0027CFAD /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE0124F2829BEFE0027CFAD /* Calendar.swift */; };
 		7BE012522829C22A0027CFAD /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE012512829C22A0027CFAD /* CalendarHelper.swift */; };
 		7BE012542829D2870027CFAD /* WeeklyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE012532829D2870027CFAD /* WeeklyViewController.swift */; };
+		7BE012562829F3CE0027CFAD /* EventEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE012552829F3CE0027CFAD /* EventEditViewController.swift */; };
+		7BE012582829F3E30027CFAD /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE012572829F3E30027CFAD /* EventCell.swift */; };
+		7BE0125A2829F7370027CFAD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE012592829F7370027CFAD /* Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		7BE0124F2829BEFE0027CFAD /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		7BE012512829C22A0027CFAD /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
 		7BE012532829D2870027CFAD /* WeeklyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyViewController.swift; sourceTree = "<group>"; };
+		7BE012552829F3CE0027CFAD /* EventEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditViewController.swift; sourceTree = "<group>"; };
+		7BE012572829F3E30027CFAD /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		7BE012592829F7370027CFAD /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,9 @@
 				7BE0123D2829A2EC0027CFAD /* ViewController.swift */,
 				7BE012532829D2870027CFAD /* WeeklyViewController.swift */,
 				7BE0123F2829A2EC0027CFAD /* Main.storyboard */,
+				7BE012592829F7370027CFAD /* Event.swift */,
+				7BE012552829F3CE0027CFAD /* EventEditViewController.swift */,
+				7BE012572829F3E30027CFAD /* EventCell.swift */,
 				7BE012512829C22A0027CFAD /* CalendarHelper.swift */,
 				7BE0124F2829BEFE0027CFAD /* Calendar.swift */,
 				7BE0124D2829B8FE0027CFAD /* CalendarCell.swift */,
@@ -151,12 +160,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BE012542829D2870027CFAD /* WeeklyViewController.swift in Sources */,
+				7BE012582829F3E30027CFAD /* EventCell.swift in Sources */,
 				7BE0123E2829A2EC0027CFAD /* ViewController.swift in Sources */,
 				7BE012522829C22A0027CFAD /* CalendarHelper.swift in Sources */,
+				7BE0125A2829F7370027CFAD /* Event.swift in Sources */,
 				7BE0123A2829A2EC0027CFAD /* AppDelegate.swift in Sources */,
 				7BE0123C2829A2EC0027CFAD /* SceneDelegate.swift in Sources */,
 				7BE0124E2829B8FE0027CFAD /* CalendarCell.swift in Sources */,
 				7BE012502829BEFE0027CFAD /* Calendar.swift in Sources */,
+				7BE012562829F3CE0027CFAD /* EventEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
