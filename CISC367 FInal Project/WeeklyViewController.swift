@@ -12,82 +12,76 @@ var selectedDate = Date()
 class WeeklyViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
     
     
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Event().eventsForDate(date: selectedDate).count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellID") as! EventCell
-        let event = Event().eventsForDate(date: selectedDate)[indexPath.row]
-        cell.eventLabel.text = event.name + " " + CalendarHelper().timeString(date: event.date)
-        
-        return cell
-        
-    }
-    
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var totalSquares = [Date]()
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         setCellsView()
         setWeekView()
     }
     
-    func setCellsView(){
+    func setCellsView()
+    {
         let width = (collectionView.frame.size.width - 2) / 8
-        let height = (collectionView.frame.size.width - 2) / 8
+        let height = (collectionView.frame.size.height - 2)
         
         let flowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         flowLayout.itemSize = CGSize(width: width, height: height)
     }
     
-    func setWeekView(){
+    func setWeekView()
+    {
         totalSquares.removeAll()
         
         var current = CalendarHelper().sundayForDate(date: selectedDate)
         let nextSunday = CalendarHelper().addDays(date: current, days: 7)
-        while(current < nextSunday){
+        
+        while (current < nextSunday)
+        {
             totalSquares.append(current)
             current = CalendarHelper().addDays(date: current, days: 1)
         }
-
-        monthLabel.text = CalendarHelper().monthString(date: selectedDate) + " " + CalendarHelper().yearString(date: selectedDate)
+        
+        monthLabel.text = CalendarHelper().monthString(date: selectedDate)
+            + " " + CalendarHelper().yearString(date: selectedDate)
         collectionView.reloadData()
         tableView.reloadData()
-        
-        
     }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         totalSquares.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "calCell", for: indexPath) as! CalendarCell
+        
         let date = totalSquares[indexPath.item]
         cell.dayOfMonth.text = String(CalendarHelper().dayOfMonth(date: date))
-        if(date == selectedDate){
+        
+        if(date == selectedDate)
+        {
             cell.backgroundColor = UIColor.systemGreen
-        }else{
+        }
+        else
+        {
             cell.backgroundColor = UIColor.white
         }
+        
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
         selectedDate = totalSquares[indexPath.item]
-        
-        
         collectionView.reloadData()
         tableView.reloadData()
     }
-    
     @IBAction func prevWeek(_ sender: Any) {
         selectedDate = CalendarHelper().addDays(date: selectedDate, days: -7)
         setWeekView()
@@ -97,11 +91,28 @@ class WeeklyViewController: UIViewController, UICollectionViewDelegate, UICollec
         setWeekView()
     }
     
-    override open var shouldAutorotate: Bool{
+    override open var shouldAutorotate: Bool
+    {
         return false
     }
     
-    override func viewDidAppear(_ animated: Bool){
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return Event().eventsForDate(date: selectedDate).count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID") as! EventCell
+        let event = Event().eventsForDate(date: selectedDate)[indexPath.row]
+        cell.eventLabel.text = event.name + " " + CalendarHelper().timeString(date: event.date)
+        return cell
+    }
+    
+    override func viewDidAppear(_ animated: Bool)
+    {
         super.viewDidAppear(animated)
         tableView.reloadData()
     }
