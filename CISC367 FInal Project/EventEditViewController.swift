@@ -21,19 +21,45 @@ class EventEditViewController: UIViewController{
         newEvent.name = nameTf.text
         newEvent.start = startDatePicker.date
         newEvent.end = endDatePicker.date
+        //newEvent.importImg = UIImage(imageView.image)
         //newEvent.allDay = allDaySwitch.self
         //newEvent.date = datePicker.date
         newEvent.descr = descriptionTf.text
         eventsList.append(newEvent)
         navigationController?.popViewController(animated: true)
     }
-    
-    
+        
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var endDatePicker: UIDatePicker!
     @IBOutlet weak var startDatePicker: UIDatePicker!
     @IBOutlet weak var nameTf: UITextField!
     @IBOutlet weak var descriptionTf: UITextField!
     //@IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var allDaySwitch: UISwitch!
+    @IBAction func didTapButton(_ sender: Any) {
+        let vc = UIImagePickerController()
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true)
+    }
+    
+}
+
+extension EventEditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]){
+        
+        
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            imageView.image = image
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController){
+        picker.dismiss(animated: true, completion: nil)
+    }
     
 }

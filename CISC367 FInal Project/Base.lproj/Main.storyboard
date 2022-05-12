@@ -386,24 +386,31 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pSD-36-DHW">
                                 <rect key="frame" x="16" y="492.5" width="48" height="32"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EE-6h-1X3">
-                                <rect key="frame" x="21" y="544" width="373" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EE-6h-1X3">
+                                <rect key="frame" x="16" y="544" width="211" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Upload Picture/Video"/>
+                                <connections>
+                                    <action selector="didTapButton:" destination="7du-aB-FfS" eventType="touchUpInside" id="4v9-2c-Xl7"/>
+                                </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uom-BW-BsC">
+                                <rect key="frame" x="244" y="522" width="150" height="75"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KVb-Tc-HWd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7EE-6h-1X3" firstAttribute="leading" secondItem="KVb-Tc-HWd" secondAttribute="leading" constant="21" id="2gu-sA-SPz"/>
                             <constraint firstItem="z5v-ME-E62" firstAttribute="top" secondItem="VBm-9b-kLG" secondAttribute="bottom" constant="17" id="39J-wk-VP7"/>
+                            <constraint firstItem="uom-BW-BsC" firstAttribute="leading" secondItem="7EE-6h-1X3" secondAttribute="trailing" constant="67" id="3ZQ-kS-Oxy"/>
                             <constraint firstItem="eon-sE-okx" firstAttribute="top" secondItem="PsP-m7-eq0" secondAttribute="bottom" constant="28" id="54o-5b-bkQ"/>
+                            <constraint firstItem="7EE-6h-1X3" firstAttribute="leading" secondItem="KVb-Tc-HWd" secondAttribute="leading" constant="16" id="DX0-OW-psX"/>
                             <constraint firstItem="Yj9-qv-KmP" firstAttribute="top" secondItem="0Z3-3R-wvK" secondAttribute="bottom" constant="40" id="ETH-Gq-whk"/>
-                            <constraint firstItem="KVb-Tc-HWd" firstAttribute="trailing" secondItem="7EE-6h-1X3" secondAttribute="trailing" constant="20" id="F9M-Ac-D2M"/>
-                            <constraint firstItem="7EE-6h-1X3" firstAttribute="centerX" secondItem="KVb-Tc-HWd" secondAttribute="centerX" id="FI1-WO-nSu"/>
+                            <constraint firstItem="KVb-Tc-HWd" firstAttribute="trailing" secondItem="uom-BW-BsC" secondAttribute="trailing" constant="20" id="FrL-mz-CAl"/>
                             <constraint firstItem="z5v-ME-E62" firstAttribute="centerY" secondItem="PsP-m7-eq0" secondAttribute="centerY" id="G6d-ua-8z6"/>
                             <constraint firstItem="PsP-m7-eq0" firstAttribute="leading" secondItem="z5v-ME-E62" secondAttribute="trailing" constant="100" id="HHp-R8-RBy"/>
                             <constraint firstItem="pSD-36-DHW" firstAttribute="height" secondItem="aac-sO-VI3" secondAttribute="height" id="IEL-aC-Uxb"/>
+                            <constraint firstItem="7EE-6h-1X3" firstAttribute="top" secondItem="pSD-36-DHW" secondAttribute="bottom" constant="30" id="JDg-2N-1BF"/>
                             <constraint firstItem="VBm-9b-kLG" firstAttribute="centerY" secondItem="vXU-gk-jlK" secondAttribute="centerY" id="JkF-GV-g7J"/>
                             <constraint firstItem="vXU-gk-jlK" firstAttribute="leading" secondItem="VBm-9b-kLG" secondAttribute="trailing" constant="100" id="KLq-ba-LdO"/>
                             <constraint firstItem="opC-nj-ZFN" firstAttribute="centerX" secondItem="KVb-Tc-HWd" secondAttribute="centerX" id="MJE-XD-MwV"/>
@@ -424,6 +431,7 @@
                             <constraint firstItem="0Z3-3R-wvK" firstAttribute="width" secondItem="opC-nj-ZFN" secondAttribute="width" id="fsb-Bq-lsR"/>
                             <constraint firstItem="Fph-Ke-w8j" firstAttribute="leading" secondItem="Yj9-qv-KmP" secondAttribute="trailing" constant="200" id="hAi-Ex-w1N"/>
                             <constraint firstItem="pSD-36-DHW" firstAttribute="top" secondItem="aac-sO-VI3" secondAttribute="bottom" constant="226.5" id="jQK-pQ-bZu"/>
+                            <constraint firstItem="7EE-6h-1X3" firstAttribute="centerY" secondItem="uom-BW-BsC" secondAttribute="centerY" id="kF3-53-fNR"/>
                             <constraint firstItem="pSD-36-DHW" firstAttribute="leading" secondItem="KVb-Tc-HWd" secondAttribute="leading" constant="20" id="kWY-7M-2tT"/>
                             <constraint firstItem="0Z3-3R-wvK" firstAttribute="top" secondItem="opC-nj-ZFN" secondAttribute="bottom" constant="20" id="nbi-3S-xEh"/>
                             <constraint firstItem="0Z3-3R-wvK" firstAttribute="centerX" secondItem="KVb-Tc-HWd" secondAttribute="centerX" id="t6D-gM-dXn"/>
@@ -450,6 +458,7 @@
                         <outlet property="allDaySwitch" destination="Fph-Ke-w8j" id="UYq-oh-hvu"/>
                         <outlet property="descriptionTf" destination="0Z3-3R-wvK" id="pJw-g0-Mb4"/>
                         <outlet property="endDatePicker" destination="PsP-m7-eq0" id="kya-mN-zBM"/>
+                        <outlet property="imageView" destination="uom-BW-BsC" id="Ad0-qN-OJr"/>
                         <outlet property="nameTf" destination="opC-nj-ZFN" id="h7c-fi-N43"/>
                         <outlet property="startDatePicker" destination="vXU-gk-jlK" id="djd-nq-hct"/>
                     </connections>

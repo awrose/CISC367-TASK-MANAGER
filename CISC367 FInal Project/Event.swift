@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 var eventsList = [Event]()
 
@@ -16,6 +17,7 @@ class Event{
     var end: Date!
     //var date: Date!
     var descr: String!
+    var importImg = [UIImage]()
     
     func eventsForDate(date: Date) -> [Event]
     {
