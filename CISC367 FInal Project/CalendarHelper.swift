@@ -38,7 +38,7 @@ class CalendarHelper{
     func timeString(date: Date) -> String {
         //formats the year for label
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
+        dateFormatter.dateFormat = "h:mm a"
         return dateFormatter.string(from: date)
     }
     
