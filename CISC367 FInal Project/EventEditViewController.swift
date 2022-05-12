@@ -38,8 +38,11 @@ class EventEditViewController: UIViewController{
     @IBOutlet weak var allDaySwitch: UISwitch!
     @IBAction func didTapButton(_ sender: Any) {
         let vc = UIImagePickerController()
+        var videoURL: NSURL?
+        
         vc.sourceType = .photoLibrary
         vc.delegate = self
+        vc.mediaTypes = ["public.image", "public.movie"]
         vc.allowsEditing = true
         present(vc, animated: true)
     }
@@ -56,6 +59,8 @@ extension EventEditViewController: UIImagePickerControllerDelegate, UINavigation
         }
         
         picker.dismiss(animated: true, completion: nil)
+        
+        guard let movieUrl = info[.mediaURL] as? URL else {return }
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController){
