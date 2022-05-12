@@ -320,6 +320,7 @@
 				DEVELOPMENT_TEAM = XTLBMC9S3C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CISC367 FInal Project/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to camer";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to your photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -349,6 +350,7 @@
 				DEVELOPMENT_TEAM = XTLBMC9S3C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "CISC367 FInal Project/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to camer";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to your photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
