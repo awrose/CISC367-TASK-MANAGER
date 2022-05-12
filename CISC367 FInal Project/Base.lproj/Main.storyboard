@@ -377,14 +377,33 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="deskclock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aac-sO-VI3">
                                 <rect key="frame" x="20" y="229" width="44" height="36"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Repeats?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eon-sE-okx">
+                                <rect key="frame" x="161" y="438" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pSD-36-DHW">
+                                <rect key="frame" x="16" y="492.5" width="48" height="32"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EE-6h-1X3">
+                                <rect key="frame" x="21" y="544" width="373" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Upload Picture/Video"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KVb-Tc-HWd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="7EE-6h-1X3" firstAttribute="leading" secondItem="KVb-Tc-HWd" secondAttribute="leading" constant="21" id="2gu-sA-SPz"/>
                             <constraint firstItem="z5v-ME-E62" firstAttribute="top" secondItem="VBm-9b-kLG" secondAttribute="bottom" constant="17" id="39J-wk-VP7"/>
+                            <constraint firstItem="eon-sE-okx" firstAttribute="top" secondItem="PsP-m7-eq0" secondAttribute="bottom" constant="28" id="54o-5b-bkQ"/>
                             <constraint firstItem="Yj9-qv-KmP" firstAttribute="top" secondItem="0Z3-3R-wvK" secondAttribute="bottom" constant="40" id="ETH-Gq-whk"/>
+                            <constraint firstItem="KVb-Tc-HWd" firstAttribute="trailing" secondItem="7EE-6h-1X3" secondAttribute="trailing" constant="20" id="F9M-Ac-D2M"/>
+                            <constraint firstItem="7EE-6h-1X3" firstAttribute="centerX" secondItem="KVb-Tc-HWd" secondAttribute="centerX" id="FI1-WO-nSu"/>
                             <constraint firstItem="z5v-ME-E62" firstAttribute="centerY" secondItem="PsP-m7-eq0" secondAttribute="centerY" id="G6d-ua-8z6"/>
                             <constraint firstItem="PsP-m7-eq0" firstAttribute="leading" secondItem="z5v-ME-E62" secondAttribute="trailing" constant="100" id="HHp-R8-RBy"/>
+                            <constraint firstItem="pSD-36-DHW" firstAttribute="height" secondItem="aac-sO-VI3" secondAttribute="height" id="IEL-aC-Uxb"/>
                             <constraint firstItem="VBm-9b-kLG" firstAttribute="centerY" secondItem="vXU-gk-jlK" secondAttribute="centerY" id="JkF-GV-g7J"/>
                             <constraint firstItem="vXU-gk-jlK" firstAttribute="leading" secondItem="VBm-9b-kLG" secondAttribute="trailing" constant="100" id="KLq-ba-LdO"/>
                             <constraint firstItem="opC-nj-ZFN" firstAttribute="centerX" secondItem="KVb-Tc-HWd" secondAttribute="centerX" id="MJE-XD-MwV"/>
@@ -398,14 +417,19 @@
                             <constraint firstItem="VBm-9b-kLG" firstAttribute="leading" secondItem="KVb-Tc-HWd" secondAttribute="leading" constant="40" id="XCR-gW-PVh"/>
                             <constraint firstItem="z5v-ME-E62" firstAttribute="leading" secondItem="KVb-Tc-HWd" secondAttribute="leading" constant="40" id="Xwe-0h-K4Z"/>
                             <constraint firstItem="Yj9-qv-KmP" firstAttribute="centerY" secondItem="Fph-Ke-w8j" secondAttribute="centerY" id="Yte-rS-F9T"/>
+                            <constraint firstItem="eon-sE-okx" firstAttribute="top" secondItem="z5v-ME-E62" secondAttribute="bottom" constant="17" id="ZbW-03-w0C"/>
                             <constraint firstItem="aac-sO-VI3" firstAttribute="leading" secondItem="KVb-Tc-HWd" secondAttribute="leading" constant="20" id="Zkd-Kk-E7l"/>
                             <constraint firstItem="KVb-Tc-HWd" firstAttribute="trailing" secondItem="PsP-m7-eq0" secondAttribute="trailing" constant="40" id="aV9-dT-8U5"/>
                             <constraint firstItem="Yj9-qv-KmP" firstAttribute="leading" secondItem="KVb-Tc-HWd" secondAttribute="leading" constant="40" id="dOq-aq-a2U"/>
                             <constraint firstItem="0Z3-3R-wvK" firstAttribute="width" secondItem="opC-nj-ZFN" secondAttribute="width" id="fsb-Bq-lsR"/>
                             <constraint firstItem="Fph-Ke-w8j" firstAttribute="leading" secondItem="Yj9-qv-KmP" secondAttribute="trailing" constant="200" id="hAi-Ex-w1N"/>
+                            <constraint firstItem="pSD-36-DHW" firstAttribute="top" secondItem="aac-sO-VI3" secondAttribute="bottom" constant="226.5" id="jQK-pQ-bZu"/>
+                            <constraint firstItem="pSD-36-DHW" firstAttribute="leading" secondItem="KVb-Tc-HWd" secondAttribute="leading" constant="20" id="kWY-7M-2tT"/>
                             <constraint firstItem="0Z3-3R-wvK" firstAttribute="top" secondItem="opC-nj-ZFN" secondAttribute="bottom" constant="20" id="nbi-3S-xEh"/>
                             <constraint firstItem="0Z3-3R-wvK" firstAttribute="centerX" secondItem="KVb-Tc-HWd" secondAttribute="centerX" id="t6D-gM-dXn"/>
                             <constraint firstItem="VBm-9b-kLG" firstAttribute="top" secondItem="Yj9-qv-KmP" secondAttribute="bottom" constant="6" id="tBa-DU-0Us"/>
+                            <constraint firstItem="eon-sE-okx" firstAttribute="centerX" secondItem="KVb-Tc-HWd" secondAttribute="centerX" id="tYp-qp-e3g"/>
+                            <constraint firstItem="pSD-36-DHW" firstAttribute="width" secondItem="aac-sO-VI3" secondAttribute="width" id="vvU-H8-mi9"/>
                             <constraint firstItem="PsP-m7-eq0" firstAttribute="top" secondItem="vXU-gk-jlK" secondAttribute="bottom" constant="7" id="w2l-Xk-3ES"/>
                         </constraints>
                     </view>
@@ -644,6 +668,7 @@
     <resources>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
+        <image name="camera" catalog="system" width="128" height="94"/>
         <image name="deskclock" catalog="system" width="128" height="124"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
