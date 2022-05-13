@@ -116,4 +116,15 @@ class WeeklyViewController: UIViewController, UICollectionViewDelegate, UICollec
         super.viewDidAppear(animated)
         tableView.reloadData()
     }
+    
+    //when clicked - this will bring up more information about the given event
+    //Event().eventsForDate(date: selectedDate)[indexZPath.row]
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let vc = storyboard?.instantiateViewController(identifier: "task") as! TaskViewController
+        vc.title = "task name"
+        //vc.task = Event().eventsForDate(date: selectedDate)[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

@@ -343,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvP-pl-qUo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2388" y="2304"/>
+            <point key="canvasLocation" x="-1043" y="2405"/>
         </scene>
         <!--Entry View Controller-->
         <scene sceneID="0JR-ql-bOH">
@@ -353,7 +353,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UMJ-87-ZMi">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UMJ-87-ZMi">
                                 <rect key="frame" x="20" y="64" width="374" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="0au-nu-GeW"/>
@@ -361,13 +361,59 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q6W-4n-ERm">
+                                <rect key="frame" x="20" y="135" width="374" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="VYH-S6-s1O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cko-Qw-dmb">
+                                <rect key="frame" x="10" y="244" width="211" height="45"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Upload Picture/Video"/>
+                                <connections>
+                                    <action selector="didTapButton:" destination="7du-aB-FfS" eventType="touchUpInside" id="SXm-Ja-MYw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mC-FH-mp7">
+                                <rect key="frame" x="10" y="297" width="211" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Take Picture/Video"/>
+                                <connections>
+                                    <action selector="didTapButton:" destination="7du-aB-FfS" eventType="touchUpInside" id="rXI-fK-Gkr"/>
+                                    <action selector="didTapTake:" destination="7du-aB-FfS" eventType="touchUpInside" id="Ud4-g9-2UP"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="J5R-lK-D6o">
+                                <rect key="frame" x="20" y="196" width="48" height="39"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kA0-Yz-NbR">
+                                <rect key="frame" x="229" y="251" width="174" height="85"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aC6-BA-4lT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="aC6-BA-4lT" firstAttribute="trailing" secondItem="J5R-lK-D6o" secondAttribute="trailing" constant="346" id="0JG-YJ-vE0"/>
+                            <constraint firstItem="kA0-Yz-NbR" firstAttribute="leading" secondItem="3mC-FH-mp7" secondAttribute="trailing" constant="8" symbolic="YES" id="15A-rd-yxJ"/>
+                            <constraint firstItem="kA0-Yz-NbR" firstAttribute="leading" secondItem="Cko-Qw-dmb" secondAttribute="trailing" constant="8" symbolic="YES" id="74V-QE-rI5"/>
+                            <constraint firstItem="Q6W-4n-ERm" firstAttribute="width" secondItem="UMJ-87-ZMi" secondAttribute="width" id="H38-Hv-08w"/>
+                            <constraint firstItem="J5R-lK-D6o" firstAttribute="leading" secondItem="aC6-BA-4lT" secondAttribute="leading" constant="20" id="Kew-Mm-ZE4"/>
+                            <constraint firstItem="Cko-Qw-dmb" firstAttribute="top" secondItem="Q6W-4n-ERm" secondAttribute="bottom" constant="57" id="OLh-IQ-BaW"/>
+                            <constraint firstItem="Q6W-4n-ERm" firstAttribute="leading" secondItem="aC6-BA-4lT" secondAttribute="leading" constant="20" id="Qvw-W5-4kF"/>
                             <constraint firstItem="UMJ-87-ZMi" firstAttribute="top" secondItem="aC6-BA-4lT" secondAttribute="top" constant="20" id="Uyi-bh-3Hs"/>
+                            <constraint firstItem="3mC-FH-mp7" firstAttribute="top" secondItem="Cko-Qw-dmb" secondAttribute="bottom" constant="8" symbolic="YES" id="Vxc-Pb-xOV"/>
+                            <constraint firstItem="3mC-FH-mp7" firstAttribute="leading" secondItem="aC6-BA-4lT" secondAttribute="leading" constant="10" id="Z5E-f0-AxV"/>
+                            <constraint firstItem="Q6W-4n-ERm" firstAttribute="height" secondItem="UMJ-87-ZMi" secondAttribute="height" id="cUZ-CK-vy3"/>
                             <constraint firstItem="aC6-BA-4lT" firstAttribute="trailing" secondItem="UMJ-87-ZMi" secondAttribute="trailing" constant="20" id="d8O-B2-wSB"/>
+                            <constraint firstItem="aC6-BA-4lT" firstAttribute="trailing" secondItem="Q6W-4n-ERm" secondAttribute="trailing" constant="20" id="hDA-CI-sdB"/>
+                            <constraint firstItem="aC6-BA-4lT" firstAttribute="bottom" secondItem="3mC-FH-mp7" secondAttribute="bottom" constant="306" id="kC1-Xh-XCo"/>
+                            <constraint firstItem="Cko-Qw-dmb" firstAttribute="top" secondItem="J5R-lK-D6o" secondAttribute="bottom" constant="21" id="p16-dx-VvS"/>
+                            <constraint firstItem="Cko-Qw-dmb" firstAttribute="leading" secondItem="aC6-BA-4lT" secondAttribute="leading" constant="10" id="pFs-Op-Ijf"/>
                             <constraint firstItem="UMJ-87-ZMi" firstAttribute="leading" secondItem="aC6-BA-4lT" secondAttribute="leading" constant="20" id="qhJ-Ht-37S"/>
+                            <constraint firstItem="Q6W-4n-ERm" firstAttribute="top" secondItem="UMJ-87-ZMi" secondAttribute="bottom" constant="19" id="uEt-Ta-DV9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -376,7 +422,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOJ-Cj-sq9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1043" y="1907"/>
+            <point key="canvasLocation" x="-1043.4782608695652" y="1906.4732142857142"/>
         </scene>
         <!--Task View Controller-->
         <scene sceneID="owu-2U-hqu">

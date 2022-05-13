@@ -10,6 +10,8 @@
 		7B3DAA5C282DEC9C00293FBA /* OnGoingToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DAA5B282DEC9C00293FBA /* OnGoingToDo.swift */; };
 		7B3DAA5E282DF1C300293FBA /* Entry View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DAA5D282DF1C300293FBA /* Entry View Controller.swift */; };
 		7B3DAA62282E126C00293FBA /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DAA61282E126C00293FBA /* TaskViewController.swift */; };
+		7B3DAA64282E969200293FBA /* DailyTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DAA63282E969200293FBA /* DailyTaskViewController.swift */; };
+		7B3DAA66282E97CB00293FBA /* DayAtAGlanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DAA65282E97CB00293FBA /* DayAtAGlanceViewController.swift */; };
 		7BE0123A2829A2EC0027CFAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE012392829A2EC0027CFAD /* AppDelegate.swift */; };
 		7BE0123C2829A2EC0027CFAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE0123B2829A2EC0027CFAD /* SceneDelegate.swift */; };
 		7BE012412829A2EC0027CFAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE0123F2829A2EC0027CFAD /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 		7B3DAA5B282DEC9C00293FBA /* OnGoingToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnGoingToDo.swift; sourceTree = "<group>"; };
 		7B3DAA5D282DF1C300293FBA /* Entry View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry View Controller.swift"; sourceTree = "<group>"; };
 		7B3DAA61282E126C00293FBA /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		7B3DAA63282E969200293FBA /* DailyTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTaskViewController.swift; sourceTree = "<group>"; };
+		7B3DAA65282E97CB00293FBA /* DayAtAGlanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayAtAGlanceViewController.swift; sourceTree = "<group>"; };
 		7BE012362829A2EC0027CFAD /* CISC367 FInal Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CISC367 FInal Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE012392829A2EC0027CFAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BE0123B2829A2EC0027CFAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,8 +80,10 @@
 			children = (
 				7BE012392829A2EC0027CFAD /* AppDelegate.swift */,
 				7B3DAA5B282DEC9C00293FBA /* OnGoingToDo.swift */,
+				7B3DAA65282E97CB00293FBA /* DayAtAGlanceViewController.swift */,
 				7BE0123B2829A2EC0027CFAD /* SceneDelegate.swift */,
 				7BE012532829D2870027CFAD /* WeeklyViewController.swift */,
+				7B3DAA63282E969200293FBA /* DailyTaskViewController.swift */,
 				7BE0123F2829A2EC0027CFAD /* Main.storyboard */,
 				7BE012592829F7370027CFAD /* Event.swift */,
 				7BE012552829F3CE0027CFAD /* EventEditViewController.swift */,
@@ -166,12 +172,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BE012542829D2870027CFAD /* WeeklyViewController.swift in Sources */,
+				7B3DAA64282E969200293FBA /* DailyTaskViewController.swift in Sources */,
 				7BE012582829F3E30027CFAD /* EventCell.swift in Sources */,
 				7BE012522829C22A0027CFAD /* CalendarHelper.swift in Sources */,
 				7BE0125A2829F7370027CFAD /* Event.swift in Sources */,
 				7BE0123A2829A2EC0027CFAD /* AppDelegate.swift in Sources */,
 				7B3DAA62282E126C00293FBA /* TaskViewController.swift in Sources */,
 				7BE0123C2829A2EC0027CFAD /* SceneDelegate.swift in Sources */,
+				7B3DAA66282E97CB00293FBA /* DayAtAGlanceViewController.swift in Sources */,
 				7BE0124E2829B8FE0027CFAD /* CalendarCell.swift in Sources */,
 				7BE012502829BEFE0027CFAD /* Calendar.swift in Sources */,
 				7BE012562829F3CE0027CFAD /* EventEditViewController.swift in Sources */,
