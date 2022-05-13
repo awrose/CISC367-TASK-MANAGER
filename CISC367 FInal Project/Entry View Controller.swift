@@ -45,7 +45,6 @@ class Entry_View_Controller: UIViewController, UITextFieldDelegate {
         let newCount = count + 1
         
         UserDefaults().set(newCount, forKey: "count")
-        
         UserDefaults().set(text, forKey: "task_\(newCount)")
         
         update?()

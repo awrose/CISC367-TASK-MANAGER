@@ -8,7 +8,10 @@
 import UIKit
 
 class ToDo: UIViewController{
-    @IBOutlet var tableView: UITableView!
+    
+    
+    
+    @IBOutlet weak var tableView: UITableView!
     
     var tasks = [String]()
     
@@ -18,8 +21,8 @@ class ToDo: UIViewController{
         self.title = "Tasks"
         
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        //tableView.delegate = self
+        //tableView.dataSource = self
         
         //set up
         if !UserDefaults().bool(forKey: "setup"){
@@ -46,7 +49,7 @@ class ToDo: UIViewController{
             }
         }
         
-        tableView.reloadData()
+        //tableView.reloadData()
         
     }
     
@@ -63,24 +66,19 @@ class ToDo: UIViewController{
         navigationController?.pushViewController(vc, animated: true)
         
     }
-}
-
-extension ToDo: UITableViewDelegate{
-    //taps on a cell:
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        //this will "unhighlight" the row
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        //show another view controller
-        let vc = storyboard?.instantiateViewController(identifier: "task") as! TaskViewController
-        vc.title = "Task Info"
-        navigationController?.pushViewController(vc, animated: true)
-        
-    }
     
 }
 
-extension ToDo: UITableViewDataSource{
+extension ToDo: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let vc = storyboard?.instantiateViewController(identifier: "task") as! TaskViewController
+        vc.title = "task name"
+        vc.task = tasks[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
