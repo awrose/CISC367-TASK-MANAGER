@@ -49,6 +49,7 @@ class Calendarr: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         
         
     }
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         totalSquares.count
@@ -57,6 +58,7 @@ class Calendarr: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "calCell", for: indexPath) as! CalendarCell
         cell.dayOfMonth.text = totalSquares[indexPath.item]
+        
         return cell
     }
     
