@@ -10,6 +10,8 @@ import UIKit
 class Entry_View_Controller: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var field: UITextField!
+    @IBOutlet weak var descrTf: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
     
     var update: (() -> Void)?
     
@@ -27,7 +29,13 @@ class Entry_View_Controller: UIViewController, UITextFieldDelegate {
     }
     
     @objc func saveTask(){
+        let newTask = Ongoing()
+        newTask.title = field.text
+        newTask.descr = descrTf.text
+        //newTask.importImg = UIImage(imageView.image)
+        newTask.id = ongoingList.count
         //save our contents of fields
+        ongoingList.append(newTask)
         
         //make sure field isn't empty
         guard let text = field.text, !text.isEmpty else{
@@ -53,5 +61,46 @@ class Entry_View_Controller: UIViewController, UITextFieldDelegate {
         
         
         
+    }
+    @IBAction func didTapUpload(_ sender: Any) {
+        let vc = UIImagePickerController()
+        
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.mediaTypes=["public.image", "public.move"]
+        vc.allowsEditing = true
+        present(vc, animated: true)
+    }
+    @IBAction func didTapTake(_ sender: Any) {
+        let picker=UIImagePickerController()
+        picker.sourceType = .camera
+        picker.allowsEditing = true
+        picker.delegate = self
+        present(picker, animated: true)
+    }
+}
+
+extension Entry_View_Controller: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]){
+        
+        
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
+            imageView.image = image
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+        
+        //guard let movieUrl = info[.mediaURL] as? URL else {return }
+        
+        guard let takenImg = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else{
+            return
+        }
+        imageView.image = takenImg
+        
+}
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController){
+        picker.dismiss(animated: true, completion: nil)
     }
 }

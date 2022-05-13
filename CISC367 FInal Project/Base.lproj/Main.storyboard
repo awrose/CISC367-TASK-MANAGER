@@ -375,6 +375,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Upload Picture/Video"/>
                                 <connections>
                                     <action selector="didTapButton:" destination="7du-aB-FfS" eventType="touchUpInside" id="SXm-Ja-MYw"/>
+                                    <action selector="didTapUpload:" destination="tBF-uu-ubx" eventType="touchUpInside" id="6j0-iv-lDm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mC-FH-mp7">
@@ -383,20 +384,22 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Take Picture/Video"/>
                                 <connections>
                                     <action selector="didTapButton:" destination="7du-aB-FfS" eventType="touchUpInside" id="rXI-fK-Gkr"/>
+                                    <action selector="didTapTake:" destination="tBF-uu-ubx" eventType="touchUpInside" id="KfN-4m-Uo6"/>
                                     <action selector="didTapTake:" destination="7du-aB-FfS" eventType="touchUpInside" id="Ud4-g9-2UP"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="camera" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="J5R-lK-D6o">
                                 <rect key="frame" x="20" y="196" width="48" height="39"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kA0-Yz-NbR">
-                                <rect key="frame" x="229" y="251" width="174" height="85"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kA0-Yz-NbR">
+                                <rect key="frame" x="202" y="251" width="201" height="85"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aC6-BA-4lT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aC6-BA-4lT" firstAttribute="trailing" secondItem="J5R-lK-D6o" secondAttribute="trailing" constant="346" id="0JG-YJ-vE0"/>
+                            <constraint firstItem="aC6-BA-4lT" firstAttribute="trailing" secondItem="kA0-Yz-NbR" secondAttribute="trailing" constant="11" id="125-xX-hjk"/>
                             <constraint firstItem="kA0-Yz-NbR" firstAttribute="leading" secondItem="3mC-FH-mp7" secondAttribute="trailing" constant="8" symbolic="YES" id="15A-rd-yxJ"/>
                             <constraint firstItem="kA0-Yz-NbR" firstAttribute="leading" secondItem="Cko-Qw-dmb" secondAttribute="trailing" constant="8" symbolic="YES" id="74V-QE-rI5"/>
                             <constraint firstItem="Q6W-4n-ERm" firstAttribute="width" secondItem="UMJ-87-ZMi" secondAttribute="width" id="H38-Hv-08w"/>
@@ -410,14 +413,18 @@
                             <constraint firstItem="aC6-BA-4lT" firstAttribute="trailing" secondItem="UMJ-87-ZMi" secondAttribute="trailing" constant="20" id="d8O-B2-wSB"/>
                             <constraint firstItem="aC6-BA-4lT" firstAttribute="trailing" secondItem="Q6W-4n-ERm" secondAttribute="trailing" constant="20" id="hDA-CI-sdB"/>
                             <constraint firstItem="aC6-BA-4lT" firstAttribute="bottom" secondItem="3mC-FH-mp7" secondAttribute="bottom" constant="306" id="kC1-Xh-XCo"/>
+                            <constraint firstItem="kA0-Yz-NbR" firstAttribute="top" secondItem="Q6W-4n-ERm" secondAttribute="bottom" constant="64" id="mb5-7W-atr"/>
                             <constraint firstItem="Cko-Qw-dmb" firstAttribute="top" secondItem="J5R-lK-D6o" secondAttribute="bottom" constant="21" id="p16-dx-VvS"/>
                             <constraint firstItem="Cko-Qw-dmb" firstAttribute="leading" secondItem="aC6-BA-4lT" secondAttribute="leading" constant="10" id="pFs-Op-Ijf"/>
                             <constraint firstItem="UMJ-87-ZMi" firstAttribute="leading" secondItem="aC6-BA-4lT" secondAttribute="leading" constant="20" id="qhJ-Ht-37S"/>
+                            <constraint firstItem="kA0-Yz-NbR" firstAttribute="centerY" secondItem="Cko-Qw-dmb" secondAttribute="centerY" id="t9w-l5-jv5"/>
                             <constraint firstItem="Q6W-4n-ERm" firstAttribute="top" secondItem="UMJ-87-ZMi" secondAttribute="bottom" constant="19" id="uEt-Ta-DV9"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descrTf" destination="Q6W-4n-ERm" id="peD-Ra-lIs"/>
                         <outlet property="field" destination="UMJ-87-ZMi" id="2zh-FF-iqa"/>
+                        <outlet property="imageView" destination="kA0-Yz-NbR" id="2yw-F1-kTe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOJ-Cj-sq9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
